@@ -4,6 +4,31 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>İleri Programlama Proje</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      src = "script.js";
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body>
+    <!-- class birden fazla elementi
+    id eşsizdir ve tek bir element özgü uygulanır -->
+    <div class="main-container">
+      <div class="stats-container">
+        <div id="moves-count "></div>
+        <div id="timer"></div>
+      </div>
+      <div class="game-container"></div>
+      <button id="stop" class="hide">Stop Game</button>
+    </div>
+    <div class="controls-container">
+      <p id="result"></p>
+      <button id="start">Start Game</button>
+    </div>
+  </body>
 </html>

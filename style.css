@@ -1,0 +1,40 @@
+* {
+
+    margin: 0;  /*bir elementin dış kenarları ile içeriği arasında boşluk bırakır*/
+    padding: 0; /*bir elementin kenarları ile içeriği arasında boşluk bırakır*/
+    box-sizing: border-box; /*bir elementin içeriğinin boyutunu, kenarları ve dolgusuyla birlikte belirler*/
+    font-family: "Poppins", sans-serif;
+
+}
+
+body {
+
+    background-color: #A020F0;
+
+    font-family: 'Roboto', sans-serif;
+
+}
+
+.main-container {
+
+   box-sizing: border-box;
+   width: 26.87em;
+   padding: 2.5em 3em;
+   background-color: #ffffff;
+   /* Konumlandırma
+   etraftaki diğer absolute position onun konumunu değiştirebilir */
+   position : absolute; 
+   transform: translate(-50%, -50%); 
+   left: 50%; 
+    top: 50%;
+
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2); 
+}
+
+.game-container {
+    /* relative sadece kendi konumu ile ilgilenir */
+    position: relative;
+    width: 100%;
+    display: grid;
+}
