@@ -85,11 +85,12 @@ const matrixGenerator = (cardValues, size = 4) => {
   //Grid Düzen
   game_container.style.gridTemplateColumns = `repeat(${size},auto)`;
 
+  let isFlippingAllowed = true;
   //Cards
   cards = document.querySelectorAll(".card-container");
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      if (!card.classList.contains("matched")) {
+      if (isFlippingAllowed & !card.classList.contains("matched")) {
         card.classList.add("flipped");
 
         if (!firstCard) {
@@ -101,12 +102,15 @@ const matrixGenerator = (cardValues, size = 4) => {
 
           secondCard = card;
           let secondCardValue = card.getAttribute("data-card-value");
+          isFlippingAllowed = false;
+
           if (firstCardValue == secondCardValue) {
             firstCard.classList.add("matched");
             secondCard.classList.add("matched");
 
             firstCard = false;
 
+            isFlippingAllowed = true;
             winCount += 1;
 
             if (winCount == Math.floor(cardValues.length / 2)) {
@@ -122,6 +126,7 @@ const matrixGenerator = (cardValues, size = 4) => {
             let delay = setTimeout(() => {
               tempFirst.classList.remove("flipped");
               tempSecond.classList.remove("flipped");
+              isFlippingAllowed = true;
             }, 900);
           }
         }
