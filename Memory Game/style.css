@@ -128,3 +128,21 @@ footer {
     text-align: center;
     width: 100%;
 }
+
+/* Telefonlar için */
+@media only screen and (max-width: 600px) {
+  .main-container {
+      width: 90%; 
+      padding: 1.5em;
+  }
+
+  .game-container {
+      gap: 0.3em;
+  }
+
+  .card-container {
+      width: 100%;
+      height: 8em; 
+  }
+
+}
